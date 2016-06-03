@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>SuhanaSafar|Book Flights, Hotels & Holidays at best Price!!!</title>
+</head>
+
+<style>
+
+.pkg_cover
+{
+	border-radius : 10px;
+	width : 280px; 
+	height : 220px; 
+	background-color : white; 
+	margin-bottom : 60px;
+	position : absolute; 
+	padding : 10px;
+	opacity : .0;
+	bottom : -153px;
+	transition: all 0.5s ease;
+}
+
+#holiday_inc_in
+{
+	border-radius : 10px;
+	border : 1px solid black;
+	background-color : #9999CC;
+	width : 300px;
+	height : 300px; 
+	margin-left : 20px; 
+	top : 125px;
+	position : absolute;
+}
+
+#holiday_cul_nor_in
+{
+	border-radius : 10px;
+	border : 1px solid black;
+	background-color : #9999CC;
+	width : 300px;
+	height : 300px; 
+	margin-left : 345px; 
+	top : 125px;
+	position : absolute;
+}
+
+#holiday_gol_tri
+{
+	border-radius : 10px;
+	border : 1px solid black;
+	background-color : #9999CC;
+	width : 300px;
+	height : 300px; 
+	margin-left : 670px; 
+	top : 125px;
+	position : absolute;
+}
+
+#holiday_royal_in
+{
+	border-radius : 10px;
+	border : 1px solid black;
+	background-color : #9999CC;
+	width : 300px;
+	height : 300px; 
+	margin-left : 20px; 
+	top : 445px;
+	position : absolute;
+}
+
+#holiday_min_raj
+{
+	border-radius : 10px;
+	border : 1px solid black;
+	background-color : #9999CC;
+	width : 300px;
+	height : 300px; 
+	margin-left : 345px; 
+	top : 445px;
+	position : absolute;
+}
+
+#holiday_glim_of_kath
+{
+	border-radius : 10px;
+	border : 1px solid black;
+	background-color : #9999CC;
+	width : 300px;
+	height : 300px; 
+	margin-left : 670px; 
+	top : 445px;
+	position : absolute;
+}
+
+#holiday_best_in
+{
+	border-radius : 10px;
+	border : 1px solid black;
+	background-color : #9999CC;
+	width : 300px;
+	height : 300px; 
+	margin-left : 20px; 
+	top : 765px;
+	position : absolute;
+}
+
+#holiday_class_nepal
+{
+	border-radius : 10px;
+	border : 1px solid black;
+	background-color : #9999CC;
+	width : 300px;
+	height : 300px; 
+	margin-left : 345px; 
+	top : 765px;
+	position : absolute;
+}
+
+#holiday_spi_o_ker
+{
+	border-radius : 10px;
+	border : 1px solid black;
+	background-color : #9999CC;
+	width : 300px;
+	height : 300px; 
+	margin-left : 670px; 
+	top : 765px;
+	position : absolute;
+}
+
+#header 
+{
+	background-image: url(./images/header.jpg);
+	background-repeat:no-repeat;
+    color:white;
+    padding:10px;
+	box-shadow: 1px 1px 2px #888888;
+}
+
+#section 
+{
+	border-radius : 0px;
+	background-image: url(./images/section.jpg);
+	background-repeat:no-repeat;
+    width : 990px;
+    height : 1000px;
+    padding:10px;
+    margin-left : 165px;	 
+    margin-top : 2.2px;
+    box-shadow: 1px 1px 2px 2px #888888;
+}
+
+#footer 
+{
+    background-color:gray;
+    height : 100px;
+    color:white;
+    clear:both;
+    text-align:center;
+   	padding:5px;	 	 
+}
+
+#header_1
+{
+	width : 880px;
+	height : 30px;
+	margin-left : 270px;
+	top : 10px;
+	background-image: url(./images/header.jpg);
+	background-repeat:no-repeat;
+	position : absolute;
+}
+
+#header_2
+{
+	width : 880px;
+	height : 30px;
+	margin-left : 270px;
+	top : 45px;
+	background-image: url(./images/header.jpg);
+	background-repeat:no-repeat;
+	position : absolute;
+}
+
+div.menu2
+{
+	top : 40px;
+    margin-left : 50px;
+	width:245px;
+	height : 25px;
+    text-align:center;
+    background-image: url(./images/bg_2.jpg);
+    border:0px solid black;
+    font-size:0;
+}
+
+div.menu2 a
+{
+    display: inline-block;
+    padding: 0 20px;
+    background-image: url(./images/bg_1.jpg);
+    color:blue;
+    text-decoration:none;
+    font: bold 12px Arial;
+    line-height: 32px;
+}
+
+div.menu2 a:hover, div.menu2 a.current
+{
+	color : orange;
+    background-position:0 -60px;
+}
+
+div.menu2 a.dummy
+{
+    width:2px;
+    padding:0 0;
+}
+
+#holiday_inc_in:hover .pkg_cover
+{
+	background-color: black;
+	opacity : .8;
+	color : white;
+	bottom: 0;
+}
+
+#holiday_cul_nor_in:hover .pkg_cover
+{
+	background-color: black;
+	opacity : .8;
+	color : white;
+	bottom: 0;
+}
+
+#holiday_gol_tri:hover .pkg_cover
+{
+	background-color: black;
+	opacity : .8;
+	color : white;
+	bottom: 0;
+}
+
+#holiday_royal_in:hover .pkg_cover
+{
+	background-color: black;
+	opacity : .8;
+	color : white;
+	bottom: 0;
+}
+
+#holiday_best_in:hover .pkg_cover
+{
+	background-color: black;
+	opacity : .8;
+	color : white;
+	bottom: 0;
+}
+
+#holiday_class_nepal:hover .pkg_cover
+{
+	background-color: black;
+	opacity : .8;
+	color : white;
+	bottom: 0;
+}
+
+#holiday_glim_of_kath:hover .pkg_cover
+{
+	background-color: black;
+	opacity : .8;
+	color : white;
+	bottom: 0;
+}
+
+#holiday_min_raj:hover .pkg_cover
+{
+	background-color: black;
+	opacity : .8;
+	color : white;
+	bottom: 0;
+}
+
+#holiday_spi_o_ker:hover .pkg_cover
+{
+	background-color: black;
+	opacity : .8;
+	color : white;
+	bottom: 0;
+}
+
+ul li
+{
+	color : red;
+	list-style-type: disc;
+}
+
+ul li span
+{
+	color : white;
+}
+
+</style>
+
+<style>
+
+a:link
+{
+	color : red;
+	text-decoration : none;
+}
+
+a:visted
+{
+	color : orange;
+	text-decoration : none;
+}
+
+a:hover
+{
+	color : orange;
+	text-decoration : none;
+}
+
+a:active
+{
+	color : green;
+	text-decoration : none;
+}
+
+div.img
+{
+	margin : 1px;
+	padding : 5px;
+	<--border : 1px solid black;>
+	height : auto;
+	width : auto;
+	float : left;
+	tect-align : center;
+}
+
+div.img img
+{
+	display : inline;
+	margin : 2px;
+	border : 1px solid red;
+}
+
+div.img a:hover img
+{
+	border : 1px solid #0000ff;
+}
+
+div.desc
+{
+	text-align : center;
+	font-weight : normal;
+	width : 120px;
+	margin : 5px;
+}
+
+</style>
+
+<body style = "margin : 0px">
+
+<div id="header">
+<img src = "./images/logo_1.png" style = "margin-left : 50px; width : 210px; height : 63px">
+<div id = "header_1">
+<p style = "text-align : left; font-size : 12px; margin-left : 650px; color : green"><a href = "login.html">Sign In</a></p>
+</div>
+<div id = "header_2">
+	<div class="menu2">
+    	<a href="index.html">Flights</a>
+    	<a href="hotels.html">Hotels</a>
+    	<a href="holiday_home.html">Holidays</a>
+	</div>
+</div>
+</div>
+
+<div id="section">
+	<div id = "holiday_inc_in">
+		<a target = "_self" href = "incredible_india.html"><img src = "./images/inc_india.jpg" alt = "incredible_india" style = "width : 100%; height : 100%; border-radius : 10px"></a>
+		<div style = "width : 280px; height : 50px; background-color : white; top : 245px; margin-left : 10px; position : absolute; opacity : .4">
+		<p style = "font-size : 12px; text-align : center"><a target = "_self" href = "incredible_india.html"><strong>Incredible India<br>(14N/15D)</strong></a></p>
+		</div>
+		<div class = "pkg_cover">
+		<h1 style = "font-size : 18px"><strong>Cities Covered</strong></h1>
+		<ul style = "list-style-type:disc; font-size : 16px">
+			<li><span>New Delhi</span></li>
+			<li><span>Mandawa</span></li>
+			<li><span>Bikaner</span></li>
+			<li><span>Jaisalmer</span></li>
+			<li><span>Jodhpur</span></li>
+			<li><span>Pushkar</span></li>
+			<li><span>Jaipur</span></li>
+		</ul>
+		</div>
+	</div>
+	<div id = "holiday_cul_nor_in">
+		<a target = "_self" href = "cultural_north_india_tour.html"><img src = "./images/north_india.jpg" alt = "north_india" style = "width : 100%; height : 100%; border-radius : 10px"></a>
+		<div style = "width : 280px; height : 50px; background-color : white; top : 245px; margin-left : 10px; position : absolute; opacity : .4">
+		<p style = "font-size : 12px; text-align : center"><a target = "_self" href = "cultural_north_india_tour.html"><strong>Cultural North India<br>(8N/9D)</strong></a></p>
+		</div>
+		<div class = "pkg_cover">
+		<h1 style = "font-size : 18px"><strong>Cities Covered</strong></h1>
+		<ul style = "list-style-type:disc; font-size : 16px">
+			<li><span>New Delhi</span></li>
+			<li><span>Jaipur</span></li>
+			<li><span>Agra</span></li>
+			<li><span>Orchha</span></li>
+			<li><span>Khajuraho</span></li>
+			<li><span>Varanasi</span></li>
+			<li><span>Sarnath</span></li>
+		</ul>
+		</div>
+	</div>
+	<div id = "holiday_gol_tri">
+		<a target = "_self" href = "golden_triangle.html"><img src = "./images/golden_triangle.jpg" alt = "golden_triangle" style = "width : 100%; height : 100%; border-radius : 10px"></a>
+		<div style = "width : 280px; height : 50px; background-color : white; top : 245px; margin-left : 10px; position : absolute; opacity : .4">
+		<p style = "font-size : 12px; text-align : center"><a target = "_self" href = "golden_triangle.html"><strong>Golden Triangle<br>(03N/04D)</strong></a></p>
+		</div>
+		<div class = "pkg_cover">
+		<h1 style = "font-size : 18px"><strong>Cities Covered</strong></h1>
+		<ul style = "list-style-type:disc; font-size : 16px">
+			<li><span>New Delhi</span></li>
+			<li><span>Jaipur</span></li>
+			<li><span>Fatehpur Sikri</span></li>
+			<li><span>New Delhi</span></li>
+		</ul>
+		</div>
+	</div>
+	<div id = "holiday_royal_in">
+		<a target = "_self" href = "royal_india.html"><img src = "./images/royal_india.jpg" alt = "royal_india" style = "width : 100%; height : 100%; border-radius : 10px"></a>
+		<div style = "width : 280px; height : 50px; background-color : white; top : 245px; margin-left : 10px; position : absolute; opacity : .4">
+		<p style = "font-size : 12px; text-align : center"><a target = "_self" href = "royal_india.html"><strong>Royal India<br>(9N/10D)</strong></a></p>
+		</div>
+		<div class = "pkg_cover">
+		<h1 style = "font-size : 18px"><strong>Cities Covered</strong></h1>
+		<ul style = "list-style-type:disc; font-size : 16px">
+			<li><span>New Delhi</span></li>
+			<li><span>Jaipur</span></li>
+			<li><span>Fatehpur Sikri</span></li>
+			<li><span>Jaipur</span></li>
+			<li><span>Jodhpur</span></li>
+			<li><span>Ronakpur</span></li>
+			<li><span>Udaipur</span></li>
+		</ul>
+		</div>
+	</div>
+	<div id = "holiday_min_raj">
+		<a target = "_self" href = "mini_rajasthan.html"><img src = "./images/rajasthan_holiday.jpg" alt = "holiday_rajasthan" style = "width : 100%; height : 100%; border-radius : 10px"></a>
+		<div style = "width : 280px; height : 50px; background-color : white; top : 245px; margin-left : 10px; position : absolute; opacity : .4">
+		<p style = "font-size : 12px; text-align : center"><a target = "_self" href = "mini_rajasthan.html"><strong>Mini Rajasthan<br>(8N/9D)</strong></a></p>
+		</div>
+		<div class = "pkg_cover">
+		<h1 style = "font-size : 18px"><strong>Cities Covered</strong></h1>
+		<ul style = "list-style-type:disc; font-size : 16px">
+			<li><span>New Delhi</span></li>
+			<li><span>Mandawa</span></li>
+			<li><span>Bikaner</span></li>
+			<li><span>Pushkar</span></li>
+			<li><span>Jaipur</span></li>
+			<li><span>Fatehpur Sikri</span></li>
+			<li><span>Agra</span></li>
+		</ul>
+		</div>
+	</div>
+	<div id = "holiday_glim_of_kath">
+		<a target = "_self" href = "glimpse_kathmandu.html"><img src = "./images/kathmandu.jpg" alt = "glimpse_of_kathmandu" style = "width : 100%; height : 100%; border-radius : 10px"></a>
+		<div style = "width : 280px; height : 50px; background-color : white; top : 245px; margin-left : 10px; position : absolute; opacity : .4">
+		<p style = "font-size : 12px; text-align : center"><a target = "_self" href = "glimpse_kathmandu.html"><strong>Glimpses Of Kathmandu<br>(3N/4D)</strong></a></p>
+		</div>
+		<div class = "pkg_cover">
+		<h1 style = "font-size : 18px"><strong>Cities Covered</strong></h1>
+		<ul style = "list-style-type:disc; font-size : 16px">
+			<li><span>Kathmandu</span></li>
+		</ul>
+		</div>
+	</div>
+	<div id = "holiday_best_in">
+		<a target = "_self" href = "best_india.html"><img src = "./images/best_of_india.jpg" alt = "best_of_india" style = "width : 100%; height : 100%; border-radius : 10px"></a>
+		<div style = "width : 280px; height : 50px; background-color : white; top : 245px; margin-left : 10px; position : absolute; opacity : .4">
+		<p style = "font-size : 12px; text-align : center"><a target = "_self" href = "best_india.html"><strong>Best Of India<br>(9N/10D)</strong></a></p>
+		</div>
+		<div class = "pkg_cover">
+		<h1 style = "font-size : 18px"><strong>Cities Covered</strong></h1>
+		<ul style = "list-style-type:disc; font-size : 16px">
+			<li><span>New Delhi</span></li>
+			<li><span>Agra</span></li>
+			<li><span>Jaipur</span></li>
+			<li><span>Aurangabad</span></li>
+			<li><span>Mumbai</span></li>
+		</ul>
+		</div>
+	</div>
+	<div id = "holiday_class_nepal">
+		<a target = "_self" href = "classical_nepal.html"><img src = "./images/classical_nepal.png" alt = "classical_nepal" style = "width : 100%; height : 100%; border-radius : 10px"></a>
+		<div style = "width : 280px; height : 50px; background-color : white; top : 245px; margin-left : 10px; position : absolute; opacity : .4">
+		<p style = "font-size : 12px; text-align : center"><a target = "_self" href = "classical_nepal.html"><strong>Classical India and Nepal<br>(11N/12D)</strong></a></p>
+		</div>
+		<div class = "pkg_cover">
+		<h1 style = "font-size : 18px"><strong>Cities Covered</strong></h1>
+		<ul style = "list-style-type:disc; font-size : 16px">
+			<li><span>New Delhi</span></li>
+			<li><span>Jaipur</span></li>
+			<li><span>Agra</span></li>
+			<li><span>Jhanshi</span></li>
+			<li><span>Orchha</span></li>
+			<li><span>Khajuraho</span></li>
+			<li><span>Varanasi</span></li>
+		</ul>
+		</div>
+	</div>
+	<div id = "holiday_spi_o_ker">
+		<a target = "_self" href = "kerala.html"><img src = "./images/kerala.jpg" alt = "spicy_kerala" style = "width : 100%; height : 100%; border-radius : 10px"></a>
+		<div style = "width : 280px; height : 50px; background-color : white; top : 245px; margin-left : 10px; position : absolute; opacity : .4">
+		<p style = "font-size : 12px; text-align : center"><a target = "_self" href = "kerala.html"><strong>Spices Of Kerala<br>(9N/10D)</strong></a></p>
+		</div>
+		<div class = "pkg_cover">
+		<h1 style = "font-size : 18px"><strong>Cities Covered</strong></h1>
+		<ul style = "list-style-type:disc; font-size : 16px">
+			<li><span>Cochin</span></li>
+			<li><span>Kumarakom</span></li>
+			<li><span>Munnar</span></li>
+			<li><span>Periyar</span></li>
+			<li><span>Madurai</span></li>
+			<li><span>Banglore</span></li>
+			<li><span>Mysore</span></li>
+		</ul>
+		</div>
+	</div>
+</div>
+<div id="footer">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Safar Account</title>
+<script>
+	function goTo(link)
+	{
+		window.location.href = link;
+	}
+   
+	function checkPassword(str)
+	{
+		var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+		return re.test(str);
+	}
+	
+	function validateForm()	
+	{	
+		var txtEmail = document.form01.userID.value;
+		var illegalChars= /[\(\)\<\>\,\;\:\\\/\"\[\]]/;
+		var n1=txtEmail.indexOf("@");
+		var n2=txtEmail.lastIndexOf(".");
+			
+		if(txtEmail == "")
+		{
+			alert("Enter valid Email address");
+			document.form01.userID.focus();
+			return false;
+		}
+	
+		if(txtEmail.match(illegalChars))
+		{
+			alert("Enter valid Email address");
+			document.form01.userID.focus();
+			return false;
+		}
+	
+		if(n1<1 ||n2-n1<2)
+		{
+			alert("Enter valid Email address");
+			document.form01.userID.focus();
+			return false;
+		}
+      
+		if(document.form01.password.value == "")
+		{
+			alert("The password you have entered is not valid!");
+			document.form01.pwd.focus();
+			return false;
+		}
+		
+		return true;
+	}
+	
+</script>
+</head>
+
+<style> 
+	input[type="radio"]
+		margin: 0px 10px 0px 10px 0px 10px; 
+</style>
+
+<style>
+
+#header 
+{
+    background-color:#ffffff;
+    color:white;
+    padding:5px;
+	box-shadow: 1px 1px 2px #888888;
+
+}
+
+#section 
+{
+	border-radius : 2px red;
+    background-color : white;
+    width : 860px;
+    height : 700px;
+	top : 110px;
+    padding:10px;
+    margin-left : 235px;	 
+	margin-bottom : 50px;
+	position : absolute;
+	box-shadow: 1px 1px 2px 2px #888888;
+
+}
+
+#signIn
+{
+	width : 470px;
+	height : 550px;
+	top : 50px;
+	margin-left : 0px;
+	background-color : white;
+	position : absolute;
+}
+
+#form01
+{
+	font-family : "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+#why
+{
+	width : 420px;
+	height : 550px;
+	top : 50px;
+	margin-left : 410px;
+	background-color : white;
+	position : absolute;
+}
+</style>
+
+<body style = "margin : 0px">
+
+<div id="header">
+<img src = "./images/logo_1.png" style = "margin-left : 50px; width : 210px; height : 63px">
+</div>
+
+<div id="section">
+	<div id = "signIn">
+	<h1 style = "text-align : left; font-size : 20px; margin-left : 75px">Sign in to SuhanaSafar securely</h1>
+	<form id = "form01" name = "form01" style = "text-align : left; margin-left : 75px; font-size : 15px"  method = "post"; action = "login.php"; onsubmit = "return validateForm();">
+		Email Address<br>
+		<input type = "text" name = "userID" style = "width : 250px; height : 20px"><br><br>
+		Password<br>
+		<input type = "password" name = "pwd" style = "width : 250px; height : 20px"><br>
+		<p style = "text-align : left; font-size : 12px"><a href = "https://secure.yatra.com/social/common/yatra/forgotpassword">Forgot Password?</a></p>
+		<input type = "submit" name = "login" value = "login" style = "background-image : url(./images/login.png); width : 260px; height : 35px; border : thick; border-color : blue; border-radius : 12px">
+		<br>
+		<input type = "button" style = "background-image : url(./images/login_fb.png); width : 260px; height : 35px; border : thick; border-color : blue; border-radius : 12px">
+		<p style = "text-align : left; font-size : 18px"><em>Don't have account? Create it now!</em></p>
+		<input type = "button" style = "background-image : url(./images/signup.png); width : 260px; height : 35px; border : thick; border-color : blue; border-radius : 12px" onclick = "goTo('signup.html');">
+	</form>
+	</div>
+	<div id = "why">
+		<h1 style = "text-align : left; font-size : 20px; margin-left : 75px">Why SignIn?</h1>
+		<img src = "./images/why.JPG" alt = "line" style = "margin-left : 55px; width : 350px; margin-top : 10px">
+
+	</div>
+</div>
+
+</body>
+
+</html>

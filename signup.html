@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>SuhanaSafar|Book Flights, Hotels & Holidays at best Price!!!</title>
+<script>
+   function goTo(link)
+   {
+   window.location.href = link;
+   }
+   
+   function DrawCaptcha()
+    {
+        var a = Math.ceil(Math.random() * 10)+ '';
+        var b = Math.ceil(Math.random() * 10)+ '';       
+        var c = Math.ceil(Math.random() * 10)+ '';  
+        var d = Math.ceil(Math.random() * 10)+ '';  
+        var e = Math.ceil(Math.random() * 10)+ '';  
+        var f = Math.ceil(Math.random() * 10)+ '';  
+        var g = Math.ceil(Math.random() * 10)+ '';  
+        var code = a + ' ' + b + ' ' + ' ' + c + ' ' + d + ' ' + e + ' '+ f + ' ' + g;
+        document.getElementById("txtCaptcha").value = code
+    }
+
+    function removeSpaces(string)
+    {
+        return string.split(' ').join('');
+    }
+	
+	function checkPassword(str)
+	{
+		var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+		return re.test(str);
+	}
+  
+	function validateForm()	
+	{	
+		var txtEmail = document.form01.email.value;
+		var illegalChars= /[\(\)\<\>\,\;\:\\\/\"\[\]]/;
+		var n1=txtEmail.indexOf("@");
+		var n2=txtEmail.lastIndexOf(".");
+		var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
+		var str2 = removeSpaces(document.getElementById('txtInput').value);
+		var mob = /^[1-9]{1}[0-9]{9}$/;
+	
+		if(document.form01.Fname.value == "")
+		{
+			alert("Please Provide First Name!");
+			document.form01.Fname.focus();
+			return false;
+		}
+	
+		if(document.form01.Lname.value == "")
+		{
+			alert("Please Provide Last Name!");
+			document.form01.Lname.focus();
+			return false;
+		}
+		
+		if(mob.test(document.form01.num.value) == false)
+		{
+			alert("Please Enter valid mobile number!");
+			document.form01.num.focus();
+			return false;
+		}
+			
+		if(txtEmail == "")
+		{
+			alert("Enter valid Email address");
+			document.form01.email.focus();
+			return false;
+		}
+	
+		if(txtEmail.match(illegalChars))
+		{
+			alert("Enter valid Email address");
+			document.form01.email.focus();
+			return false;
+		}
+	
+		if(n1<1 ||n2-n1<2)
+		{
+			alert("Enter valid Email address");
+			document.form01.email.focus();
+			return false;
+		}
+
+		if(!checkPassword(form01.password.value))
+		{
+			alert("The password you have entered is not valid!");
+			document.form01.password.focus();
+			return false;
+		}
+		        
+		if(document.form01.password.value == "" && (document.form01.password.value != document.form01.password_re.value))
+		{
+			alert("The password you have entered is not valid!");
+			return false;
+		}
+		
+		if (str1 != str2) 
+		{
+			alert("Error : Enter Valid Captcha.");
+			return false;    
+		}
+	
+		return true;
+	}
+	
+</script>
+</head>
+
+<style> 
+	input[type="radio"]
+		margin: 0px 10px 0px 10px 0px 10px; 
+</style>
+
+<style>
+
+#header 
+{
+    background-color:#ffffff;
+    color:white;
+    padding:5px;
+	box-shadow: 1px 1px 2px #888888;
+
+}
+
+#section 
+{
+	border-radius : 2px red;
+    background-color : white;
+    width : 860px;
+    height : 900px;
+	top : 110px;
+    padding:10px;
+    margin-left : 235px;	 
+	margin-bottom : 50px;
+	position : absolute;
+	box-shadow: 1px 1px 2px 2px #888888;
+
+}
+
+#signIn
+{
+	width : 470px;
+	height : 650px;
+	top : 50px;
+	margin-left : 0px;
+	background-color : white;
+	position : absolute;
+}
+
+#form01
+{
+	font-family : "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+#why
+{
+	width : 420px;
+	height : 550px;
+	top : 50px;
+	margin-left : 410px;
+	background-color : white;
+	position : absolute;
+}
+</style>
+
+<body onload = "DrawCaptcha();" style = "margin : 0px">
+
+<div id="header">
+<img src = "./images/logo_1.png" style = "margin-left : 50px; width : 210px; height : 63px">
+</div>
+
+<div id="section">
+	<div id = "signIn">
+	<h1 style = "text-align : left; font-size : 20px; margin-left : 75px">Create Your Safar Account</h1>
+	<form name = "form01" id = "form01" style = "text-align : left; margin-left : 75px; font-size : 15px" method = "post"; action = "reg.php"; onsubmit = "return validateForm();">
+		First Name<br>
+		<input type = "text" name = "Fname" id = "Fname" style = "width : 250px; height : 20px"><br>
+		<br>Last Name<br>
+		<input type = "text" name = "Lname" id = "Lname" style = "width : 250px; height : 20px"><br>
+		<br>Mobile Number<br>
+		<input type = "text" name = "num" id = "num" style = "width : 250px; height : 20px"><br>
+		<br>Email Address<br>
+		<input type = "text" name = "email" id = "email" style = "width : 250px; height : 20px"><br>
+		<br>Password<br>
+		<input type = "password" name = "password" id = "password" style = "width : 250px; height : 20px"><br>
+		<br>Confirm Password<br>
+		<input type = "password" name = "password_re" id = "password_re" style = "width : 250px; height : 20px"><br>
+		<p style = "text-align : left; font-size : 14px"><b>I'm Not a Bot</b></p>
+		<input type="text" id="txtCaptcha" style="background-image:url(./images/wall.jpg); text-align:center; border:none;font-weight:bold; font-family:Modern; width : 100px; height : 50px" />&nbsp&nbsp
+		<input type="button" id="btnrefresh" style="background-image:url(./images/refresh_1.png); width : 25px; height : 25px; border-radius : 20px" onclick="DrawCaptcha();" />
+		<p style = "text-align : left; font-size : 14px"><b>Type the text:</b></p>
+		<input type="text" id="txtInput" style = "width : 250px; height : 20px"/><br>    
+		<br><input type = "checkbox" name = "check" value = "man">I agree to the Safar Terms Of Service <br> and Privacy Policy<br>
+		<br><input type = "submit" name = "signup" value="Register" style = "background-image : url(./images/register.png); width : 260px; height : 35px; border : thick; border-color : blue; border-radius : 12px" onclick = ValidCaptcha();>
+	</form>
+	</div>
+	<div id = "why">
+		<h1 style = "text-align : left; font-size : 20px; margin-left : 75px">Do More With Safar Account!</h1>
+		<img src = "./images/do_safar.JPG" alt = "line" style = "margin-left : 55px; width : 350px; margin-top : 10px">
+
+	</div>
+</div>
+
+</body>
+</html>

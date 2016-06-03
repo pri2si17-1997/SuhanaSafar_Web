@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<head>
+<script>
+function openLink(radio)
+{
+ window.open(radio.value,'_self');
+}
+
+</script>
+</head>
+<body>
+<body>
+<div style = "left = 5px; top = 5px; height = 350px ;width : 440px; background-color : white">
+<form name = "form01" action = "one_way.php" method = "post" target = "_blank">
+<table style="width : 440px">
+  <col width = "120">
+  <col width = "120">
+  <tr>
+  <td colspan = "2"><input type="radio" name="sex" value="One Way" checked> One Way&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <input type="radio" name="sex" value="round_trip.html" onclick="openLink(this)" target = "frame_1"> Round Trip </td>
+  <td><input type = "radio" name = "sex" value = "multi_city.html" onclick = "openLink(this)" target = "frame_1"> Multi City</td>
+  </tr>
+  <tr>
+  <td colspan = "2">Leaving From</td>
+  <td>Going To</td>
+  </tr>
+  <tr>
+  <td colspan = "2"><input type = "text" name = "LeavingFrom" placeholder = "Enter City/Airport" required></td>
+  <td><input type = "text" name = "GoingTo" placeholder = "Enter City/Airport" required></td>
+  </tr>
+  <tr>
+  <td colspan = "2"><br>Departure Date</th>
+  <td><br>Return Date</th>
+  </tr>
+  <tr>
+  <td colspan = "2"><input type = "date" name = "DepartureDate" style = "width : 125px" required></td>
+  <td><input type = "date" name = "ReturnDate" style = "width : 125px" disabled></td>
+  </tr>
+  <tr>
+  <td><br><strong>Adult</strong>(12+)</td>
+  <td><br><strong>Children</strong>(2-12)</td>
+  <td><br><strong>Infant</strong>(0-2)</td>
+  </tr>
+  <tr>
+  <td>
+    <select name="Adult" style = "width : 75px">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    </select>
+  </td>
+  <td>
+    <select name="Children" style = "width : 75px">
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    </select>
+  </td>
+  <td>
+    <select name="Infant" style = "width : 75px">
+    <option value="0">0</option>
+    <option value="1">1</option>
+    </select>
+  </td>
+  </tr>
+  <tr>
+  <td colspan = "2"><br><strong>Class</strong></td>
+  </tr>
+  <tr>
+  <td colspan = "2">
+  <select name="Class" style = "width : 100px">
+    <option value="Economy">Economy</option>
+    <option value="Business">Business</option>
+    <option value="First Class">First Class</option>
+    <option value="Prenium Economy">Premium Economy</option>
+  </td>
+  <td>
+  <input type = "submit" name = "signup" style = "background-image : url(./images/ShowFlights.jpg); width : 100px; height = 200px">
+  </tr>
+</table>
+</form>
+</div>
+</body>
+</html>
+</body>
+</html>
